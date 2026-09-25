@@ -65,7 +65,7 @@ export default function Navbar() {
           ))}
 
           <a
-            href="https://github.com/gauravsaha362" 
+            href="https://github.com/Gauravsaha07/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="ml-3 inline-flex items-center gap-1 text-xs text-zinc-400 hover:text-white px-3 py-1.5 rounded-md border border-white/10 hover:border-zinc-700 bg-zinc-900/50 transition-all"
