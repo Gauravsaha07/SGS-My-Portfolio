@@ -32,7 +32,7 @@ export default function Contact() {
       key: 'phone',
       icon: Phone,
       label: 'Phone',
-      value: '8839014534',
+      value: '+91 8839014534',
       actionUrl: 'tel:8839014534',
       isLink: true,
       copyable: true
@@ -41,9 +41,9 @@ export default function Contact() {
       key: 'instagram',
       icon: InstagramIcon,
       label: 'Instagram',
-      value: '@sgs_gaurav-builds_',
+      value: '@sgs_gaurav_builds_',
       secondaryValue: '@sgs_fullstackwith_gaurav',
-      actionUrl: 'https://instagram.com/sgs_gaurav-builds_',
+      actionUrl: 'https://instagram.com/sgs_gaurav_builds_',
       secondaryUrl: 'https://instagram.com/sgs_fullstackwith_gaurav',
       isLink: true,
       copyable: false
