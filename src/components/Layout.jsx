@@ -6,7 +6,6 @@ import Footer from './Footer';
 export default function Layout({ children }) {
   const { pathname } = useLocation();
 
-  // Scroll to top on route change
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);

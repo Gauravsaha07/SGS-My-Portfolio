@@ -38,7 +38,6 @@ export default function About() {
 
   return (
     <div className="max-w-4xl space-y-16">
-      {/* Header */}
       <div className="space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-white/10 text-xs font-mono text-emerald-400">
           <User size={13} />
@@ -49,7 +48,6 @@ export default function About() {
         </h1>
       </div>
 
-      {/* Bio Section */}
       <section className="space-y-6">
         <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-semibold">
           Biography
@@ -67,7 +65,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Achievements Section */}
       <section className="space-y-6">
         <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-semibold">
           Achievements
@@ -102,7 +99,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Skills Section */}
       <section className="space-y-6">
         <div className="flex flex-col space-y-1">
           <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-semibold">
@@ -137,7 +133,6 @@ export default function About() {
           ))}
         </div>
 
-        {/* Currently Learning Subsection */}
         <div className="pt-4 space-y-3">
           <div className="flex items-center justify-between">
             <h3 className="text-xs font-mono uppercase tracking-widest text-zinc-400 font-semibold flex items-center gap-2">
@@ -161,15 +156,12 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Additional Competencies: Computer Skills, Languages Known, Soft Skills */}
       <section className="space-y-6">
         <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-semibold">
           Additional Competencies
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Computer Skills */}
           <div className="p-6 rounded-2xl bg-[#121214] border border-white/10 space-y-4">
             <h3 className="text-sm font-bold text-white flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-400" />
@@ -186,8 +178,6 @@ export default function About() {
               ))}
             </div>
           </div>
-
-          {/* Languages Known */}
           <div className="p-6 rounded-2xl bg-[#121214] border border-white/10 space-y-4">
             <h3 className="text-sm font-bold text-white flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-400" />
@@ -204,8 +194,6 @@ export default function About() {
               ))}
             </div>
           </div>
-
-          {/* Soft Skills */}
           <div className="p-6 rounded-2xl bg-[#121214] border border-white/10 space-y-4">
             <h3 className="text-sm font-bold text-white flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-emerald-400" />
@@ -224,8 +212,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Philosophy / Principles */}
       <section className="space-y-6">
         <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-semibold">
           Development Principles

@@ -14,7 +14,6 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [location.pathname]);
@@ -22,7 +21,6 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full bg-[#0a0a0a]/85 backdrop-blur-md border-b border-white/10 transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        {/* Left: Brand Logo / Name */}
         <NavLink 
           to="/" 
           className="flex items-center gap-2.5 group text-white font-semibold text-base tracking-tight"
@@ -38,7 +36,6 @@ export default function Navbar() {
           </span>
         </NavLink>
 
-        {/* Right: Desktop Navigation Links */}
         <nav className="hidden md:flex items-center space-x-1">
           {navItems.map((item) => (
             <NavLink
@@ -75,7 +72,6 @@ export default function Navbar() {
           </a>
         </nav>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -87,7 +83,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden border-b border-white/10 bg-[#0c0c0e] px-4 pt-2 pb-4 space-y-1">
           {navItems.map((item) => (

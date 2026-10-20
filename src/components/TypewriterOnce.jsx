@@ -22,17 +22,13 @@ export default function TypewriterOnce() {
 
     if (!isDeleting) {
       if (charIndex < characters.length) {
-        // Typing out character by character (~80ms)
         timer = setTimeout(() => {
           setCharIndex((prev) => prev + 1);
         }, 80);
       } else {
-        // Full line typed
         if (lineIndex === lines.length - 1) {
-          // Last line: DO NOT erase, DO NOT loop. Stop here permanently.
           setIsFinished(true);
         } else {
-          // Hold for 1.8 seconds before erasing
           timer = setTimeout(() => {
             setIsDeleting(true);
           }, 1800);
@@ -40,12 +36,10 @@ export default function TypewriterOnce() {
       }
     } else {
       if (charIndex > 0) {
-        // Erasing character by character (~38ms)
         timer = setTimeout(() => {
           setCharIndex((prev) => prev - 1);
         }, 38);
       } else {
-        // Finished erasing -> Move to next line in array
         setIsDeleting(false);
         setLineIndex((prev) => prev + 1);
       }

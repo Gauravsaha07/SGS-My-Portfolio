@@ -9,7 +9,6 @@ const rawLines = [
   "Others scroll, I create🚀",
 ];
 
-// Pre-split lines into unicode code point arrays
 const parsedLines = rawLines.map((line) => Array.from(line));
 const lineLengths = parsedLines.map((chars) => chars.length);
 
@@ -34,7 +33,6 @@ export default function HeroTypewriter() {
     return () => clearTimeout(timer);
   }, [typedCount]);
 
-  // Find active line index
   let activeLineIndex = 0;
   for (let i = 0; i < parsedLines.length; i++) {
     if (typedCount >= lineStartIndices[i]) {
@@ -46,14 +44,13 @@ export default function HeroTypewriter() {
     <div className="min-h-[290px] sm:min-h-[350px] flex flex-col justify-start space-y-2 py-2">
       {parsedLines.map((chars, idx) => {
         const startIdx = lineStartIndices[idx];
-        if (typedCount < startIdx) return null; // Line hasn't started typing yet
+        if (typedCount < startIdx) return null; 
 
         const charsForThisLine = Math.min(chars.length, typedCount - startIdx);
         const lineText = chars.slice(0, charsForThisLine).join('');
         const isActive = idx === activeLineIndex;
 
         if (idx === 0) {
-          // Line 0: Main heading style with "Gaurav Saha" in accent color
           const prefix = lineText.slice(0, 10);
           const namePart = lineText.length > 10 ? lineText.slice(10) : '';
 
@@ -66,7 +63,6 @@ export default function HeroTypewriter() {
           );
         }
 
-        // Lines 1..5: Tagline style
         return (
           <p key={idx} className="text-xl sm:text-2xl font-medium text-zinc-300 leading-snug">
             <span>{lineText}</span>

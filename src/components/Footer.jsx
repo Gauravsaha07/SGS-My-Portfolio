@@ -7,7 +7,6 @@ export default function Footer() {
     <footer className="w-full border-t border-white/10 bg-[#0a0a0a] py-10 mt-auto">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Left: Brand / Copyright */}
           <div className="flex flex-col items-center md:items-start space-y-1">
             <div className="flex items-center gap-2">
               <span className="text-white font-semibold text-sm tracking-tight">Gaurav Saha</span>
@@ -19,7 +18,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Center / Right: Social Links */}
           <div className="flex items-center gap-3 flex-wrap justify-center">
             <a
               href="mailto:gauravsaha362@gmail.com"

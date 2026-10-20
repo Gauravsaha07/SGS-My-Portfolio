@@ -42,9 +42,7 @@ export default function Contact() {
       icon: InstagramIcon,
       label: 'Instagram',
       value: '@sgs_gaurav_builds_',
-      secondaryValue: '@sgs_fullstackwith_gaurav',
       actionUrl: 'https://instagram.com/sgs_gaurav_builds_',
-      secondaryUrl: 'https://instagram.com/sgs_fullstackwith_gaurav',
       isLink: true,
       copyable: false
     },
@@ -61,7 +59,6 @@ export default function Contact() {
 
   return (
     <div className="max-w-4xl space-y-12">
-      {/* Header */}
       <div className="space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-white/10 text-xs font-mono text-emerald-400">
           <MessageSquare size={13} />
@@ -75,7 +72,6 @@ export default function Contact() {
         </p>
       </div>
 
-      {/* Contact Methods List */}
       <div className="space-y-4">
         <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-semibold mb-4">
           Direct Channels
@@ -90,7 +86,6 @@ export default function Contact() {
                 key={method.key}
                 className="p-5 sm:p-6 rounded-2xl bg-[#121214] border border-white/10 hover:border-zinc-700 transition-all flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
               >
-                {/* Left: Icon & Info */}
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-zinc-900 border border-white/10 flex items-center justify-center text-emerald-400 shrink-0">
                     <IconComponent size={20} />
@@ -131,7 +126,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Right: Actions */}
                 <div className="flex items-center gap-2 self-end sm:self-center">
                   {method.copyable && (
                     <button
@@ -171,7 +165,6 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Minimal Message Form */}
       <div className="pt-6 space-y-6 border-t border-white/10">
         <div>
           <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-semibold">

@@ -15,31 +15,26 @@ export default function TypewriterHeading() {
 
   useEffect(() => {
     const currentFullText = heroLines[lineIndex];
-    // Array.from splits correctly handling multi-byte unicode emojis
     const characters = Array.from(currentFullText);
 
     let timer;
 
     if (!isDeleting) {
       if (charIndex < characters.length) {
-        // Typing character by character (~85ms)
         timer = setTimeout(() => {
           setCharIndex((prev) => prev + 1);
         }, 85);
       } else {
-        // Finished typing full line -> Hold for 2 seconds (2000ms)
         timer = setTimeout(() => {
           setIsDeleting(true);
         }, 2000);
       }
     } else {
       if (charIndex > 0) {
-        // Erasing character by character (~45ms, faster than typing)
         timer = setTimeout(() => {
           setCharIndex((prev) => prev - 1);
         }, 45);
       } else {
-        // Finished erasing -> Move to next line in array (looping infinitely)
         setIsDeleting(false);
         setLineIndex((prev) => (prev + 1) % heroLines.length);
       }

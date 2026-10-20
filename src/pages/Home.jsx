@@ -8,23 +8,18 @@ import HeroTypewriter from '../components/HeroTypewriter';
 export default function Home() {
   return (
     <div className="space-y-20">
-      {/* Hero Section */}
       <section className="max-w-3xl space-y-8 pt-4 sm:pt-8">
-        {/* Status Pill */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/90 border border-white/10 text-xs font-mono text-zinc-400">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span>Available for full-stack opportunities</span>
         </div>
 
-        {/* ONE Combined Typewriter Block (Heading + Taglines continuous typing) */}
         <HeroTypewriter />
 
-        {/* Intro Description Paragraph */}
         <p className="text-base sm:text-lg text-zinc-400 leading-relaxed font-normal max-w-2xl">
           I build full-stack web applications focused on performance, clean architecture, and intuitive user experiences. Specializing in React, Node.js, and modern JavaScript ecosystems.
         </p>
 
-        {/* CTA Buttons */}
         <div className="flex flex-wrap items-center gap-4 pt-2">
           <Link
             to="/projects"
@@ -44,7 +39,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Focus Areas Grid */}
       <section className="space-y-6">
         <h2 className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-semibold">
           Core Expertise
@@ -82,7 +76,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Projects Preview */}
       <section className="space-y-6">
         <div className="flex items-center justify-between">
           <div>

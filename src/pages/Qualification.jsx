@@ -11,7 +11,6 @@ export default function Qualification() {
 
   return (
     <div className="max-w-4xl space-y-12">
-      {/* Header */}
       <div className="space-y-4">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-white/10 text-xs font-mono text-emerald-400">
           <GraduationCap size={13} />
@@ -25,7 +24,6 @@ export default function Qualification() {
         </p>
       </div>
 
-      {/* Filter Tabs */}
       <div className="flex flex-wrap items-center gap-2 border-b border-white/10 pb-4">
         {[
           { id: 'all', label: 'All Timeline' },
@@ -47,7 +45,6 @@ export default function Qualification() {
         ))}
       </div>
 
-      {/* Vertical Timeline */}
       <div className="relative pl-6 sm:pl-8 border-l border-zinc-800 space-y-10 my-8">
         {filteredData.map((item) => {
           const getTypeBadge = () => {
@@ -68,12 +65,9 @@ export default function Qualification() {
 
           return (
             <div key={item.id} className="relative group">
-              {/* Timeline Dot Indicator */}
               <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-[#0a0a0a] border-2 border-emerald-400 group-hover:scale-125 transition-transform" />
 
-              {/* Card Container */}
               <div className="p-6 rounded-2xl bg-[#121214] border border-white/10 hover:border-zinc-700 transition-all space-y-4">
-                {/* Top Badge & Date */}
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono font-medium border ${badge.color}`}>
                     <IconComponent size={13} />
@@ -92,7 +86,6 @@ export default function Qualification() {
                   </div>
                 </div>
 
-                {/* Title & Organization */}
                 <div>
                   <h3 className="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">
                     {item.title}
@@ -102,12 +95,10 @@ export default function Qualification() {
                   </p>
                 </div>
 
-                {/* Description */}
                 <p className="text-sm text-zinc-400 leading-relaxed font-normal">
                   {item.description}
                 </p>
 
-                {/* Bullet Highlights if available */}
                 {item.highlights && item.highlights.length > 0 && (
                   <ul className="space-y-2 pt-2 border-t border-white/5">
                     {item.highlights.map((point, index) => (
